@@ -138,7 +138,7 @@ public class operateController<T, S> implements ControlledStage, Initializable {
 		
 		CheckBox cb = new CheckBox();
 		cb.setLayoutX(30);cb.setLayoutY(1);
-		Image icondel = new Image("application/del.png");
+		Image icondel = new Image("image/del.png");
 		ImageView icondel1 = new ImageView(icondel);
 		icondel1.setFitWidth(15); icondel1.setFitHeight(15);
 		Pane delpane = new Pane();
@@ -178,9 +178,9 @@ public class operateController<T, S> implements ControlledStage, Initializable {
 			getCurServer();
 			diclist.add(cur.watchingpath);
 			setDic();
-		}
+		}else{
 		diclist.add(getPath());
-		setDic();
+		setDic();}
 	}
 	
 	public void clear(){
@@ -213,18 +213,21 @@ public class operateController<T, S> implements ControlledStage, Initializable {
 		if(cur.type.equals("SFTP")){
 			RealTimeSync watch = new RealTimeSync(cur.watchingpath,
 					true, new SFtpUtil(cur.ip, cur.username, cur.password, cur.port), sleepMillis);
-			System.out.println("SFTP");
+			new Thread(watch).start();
+			System.out.println("SFTP");//**************
 			return true;
 		}else if(cur.type.equals("FTP")){
 			RealTimeSync watch = new RealTimeSync(cur.watchingpath,
 					true, new FtpUtil(cur.ip, cur.username, cur.password, cur.port),sleepMillis);
-			System.out.println("ftp");
+			new Thread(watch).start();
+			System.out.println("ftp");//***************
 			return true;
 		}else if(cur.type.equals("local")){
 			
 			RealTimeSync watch = new RealTimeSync(cur.watchingpath,
 					true, new LocalUtil(cur.ip),sleepMillis);
-			System.out.println("local");
+			new Thread(watch).start();
+			System.out.println("local");//***************
 			return true;
 		}else{
 			System.out.println("Sever Type Error");
@@ -247,17 +250,21 @@ public class operateController<T, S> implements ControlledStage, Initializable {
 		if(cur.type.equals("SFTP")){
 			RealTimeSync watch = new RealTimeSync(cur.watchingpath,
 					true, new SFtpUtil(cur.ip, cur.username, cur.password, cur.port));
+			new Thread(watch).start();
 			System.out.println("SFTP");
 			return true;
 		}else if(cur.type.equals("FTP")){
+			
 			RealTimeSync watch = new RealTimeSync(cur.watchingpath,
 					true, new FtpUtil(cur.ip, cur.username, cur.password, cur.port));
+			new Thread(watch).start();
 			System.out.println("ftp");
 			return true;
 		}else if(cur.type.equals("local")){
 			
 			RealTimeSync watch = new RealTimeSync(cur.watchingpath,
 					true, new LocalUtil(cur.ip));
+			new Thread(watch).start();
 			System.out.println("local");
 			return true;
 		}else{

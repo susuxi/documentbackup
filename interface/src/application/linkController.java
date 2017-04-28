@@ -103,11 +103,11 @@ public class linkController implements ControlledStage,Initializable{
 		pane.setStyle("-fx-background-color:white;");
 		pane.setPrefSize(395,45);
 		if(c.type.equals("SFTP")){
-			icontype = new Image("application/sftp.png");
+			icontype = new Image("image/sftp.png");
 		}else if(c.type.equals("FTP")){
-			icontype = new Image("application/ftp.png");
+			icontype = new Image("image/ftp.png");
 		}else{
-			icontype = new Image("application/local.png");
+			icontype = new Image("image/local.png");
 		}
 		ImageView iconftp1 = new ImageView(icontype);
 		iconftp1.setFitWidth(45); iconftp1.setFitHeight(40);
@@ -116,14 +116,14 @@ public class linkController implements ControlledStage,Initializable{
 		label.setGraphic(iconftp1);
 		label.setLayoutX(5); label.setLayoutY(2);
 		
-		Image icondel = new Image("application/del.png");
+		Image icondel = new Image("image/del.png");
 		ImageView icondel1 = new ImageView(icondel);
 		icondel1.setFitWidth(20); icondel1.setFitHeight(20);
 		Pane delpane = new Pane();
 		delpane.setPrefSize(20, 20);delpane.getChildren().add(icondel1);
 		delpane.setLayoutX(330);delpane.setLayoutY(10);
 		
-		Image iconlink = new Image("application/link.png");
+		Image iconlink = new Image("image/link.png");
 		ImageView iconlink1 = new ImageView(iconlink);
 		iconlink1.setFitWidth(20); iconlink1.setFitHeight(20);
 		iconlink1.setLayoutX(360);iconlink1.setLayoutY(10);

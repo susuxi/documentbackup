@@ -158,7 +158,7 @@ public class Systray {
 
 				SystemTray tray = SystemTray.getSystemTray();
 
-				BufferedImage image = ImageIO.read(Main.class.getResourceAsStream("u2.png"));
+				BufferedImage image = ImageIO.read(Main.class.getResourceAsStream("/image/u2.png"));
 
 				trayIcon = new TrayIcon(image, "TimeMachine", popupMenu);
 				trayIcon.setImageAutoSize(true);

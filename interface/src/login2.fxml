@@ -18,7 +18,7 @@
          <children>
             <ImageView fitHeight="150.0" fitWidth="345.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@application/u2.png" />
+                  <Image url="@image/u2.png" />
                </image>
                <VBox.margin>
                   <Insets left="90.0" />
@@ -33,7 +33,7 @@
                <children>
                   <ImageView fx:id="icon_server" fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@application/00_u12.png" />
+                        <Image url="@image/00_u12.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="10.0" right="20.0" />
@@ -47,14 +47,14 @@
                <children>
                   <ImageView fx:id="icon_cloud" fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@application/01_u6.png" />
+                        <Image url="@image/01_u6.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="10.0" right="20.0" />
                      </HBox.margin></ImageView>
                   <TextField fx:id="text_ip" prefHeight="28.0" prefWidth="180.0" promptText="远程服务器地址" />
                   <Label alignment="CENTER" prefHeight="29.0" prefWidth="20.0" text=":" textAlignment="CENTER" />
-                  <TextField fx:id="text_port" prefHeight="28.0" prefWidth="59.0" promptText="默认20" />
+                  <TextField fx:id="text_port" prefHeight="28.0" prefWidth="59.0" />
                </children>
                <VBox.margin>
                   <Insets bottom="10.0" top="10.0" />
@@ -64,7 +64,7 @@
                <children>
                   <ImageView fx:id="icon_file" fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@application/02_u20.png" />
+                        <Image url="@image/02_u20.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="10.0" right="20.0" />
@@ -80,7 +80,7 @@
                <children>
                   <ImageView fx:id="icon_user" fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@application/3_u37.png" />
+                        <Image url="@image/3_u37.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="10.0" right="20.0" />
@@ -100,7 +100,7 @@
                <children>
                   <ImageView fx:id="icon_key" fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@application/4_u33.png" />
+                        <Image url="@image/4_u33.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="10.0" right="20.0" />
@@ -116,7 +116,7 @@
                <children>
                   <ImageView fx:id="icon_mark" fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@application/5_u39.png" />
+                        <Image url="@image/5_u39.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="10.0" right="20.0" />
