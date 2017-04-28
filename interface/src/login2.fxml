@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="345.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.login2Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="20.0" fill="#f2f2f2" height="605.0" layoutY="1.0" strokeType="INSIDE" width="345.0" />
+      <VBox layoutY="14.0" prefHeight="478.0" prefWidth="345.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="345.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@application/u2.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="90.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label alignment="CENTER" prefHeight="75.0" prefWidth="345.0" text="Time Machine" textAlignment="CENTER">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <HBox fx:id="pane" prefHeight="56.0" prefWidth="345.0">
+               <children>
+                  <ImageView fx:id="icon_server" fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@application/00_u12.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </HBox.margin></ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="345.0">
+               <children>
+                  <ImageView fx:id="icon_cloud" fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@application/01_u6.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </HBox.margin></ImageView>
+                  <TextField fx:id="text_ip" prefHeight="28.0" prefWidth="180.0" promptText="远程服务器地址" />
+                  <Label alignment="CENTER" prefHeight="29.0" prefWidth="20.0" text=":" textAlignment="CENTER" />
+                  <TextField fx:id="text_port" prefHeight="28.0" prefWidth="59.0" promptText="默认20" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="51.0" prefWidth="345.0">
+               <children>
+                  <ImageView fx:id="icon_file" fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@application/02_u20.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </HBox.margin></ImageView>
+                  <TextField fx:id="text_file" prefHeight="28.0" prefWidth="228.0" promptText="本地同步目录" />
+                  <Button fx:id="button_files" mnemonicParsing="false" onAction="#filechose" prefHeight="28.0" prefWidth="30.0" text="Button" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="51.0" prefWidth="345.0">
+               <children>
+                  <ImageView fx:id="icon_user" fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@application/3_u37.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <TextField fx:id="text_user" prefHeight="28.0" prefWidth="257.0" promptText="登录帐户">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="57.0" prefWidth="345.0">
+               <children>
+                  <ImageView fx:id="icon_key" fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@application/4_u33.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <TextField fx:id="text_key" prefHeight="28.0" prefWidth="256.0" promptText="密码" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="icon_mark" fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@application/5_u39.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <TextField fx:id="text_mark" prefHeight="28.0" prefWidth="257.0" promptText="备注名" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Pane prefHeight="41.0" prefWidth="345.0">
+               <children>
+                  <Polygon fx:id="button_retract" fill="#9a9ea1" layoutX="173.0" layoutY="24.0" onMouseClicked="#retract" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="INSIDE" style="-fx-scale-x: 0.3; -fx-scale-y: 0.3;">
+                    <points>
+                      <Double fx:value="-50.0" />
+                      <Double fx:value="40.0" />
+                      <Double fx:value="50.0" />
+                      <Double fx:value="40.0" />
+                      <Double fx:value="0.0" />
+                      <Double fx:value="-60.0" />
+                    </points>
+                  </Polygon>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Pane>
+            <Pane prefHeight="63.0" prefWidth="345.0">
+               <children>
+                  <Button fx:id="button_save" contentDisplay="CENTER" layoutX="115.0" layoutY="14.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="50.0" prefWidth="116.0" style="-fx-border-radius: 10;" text="Save">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

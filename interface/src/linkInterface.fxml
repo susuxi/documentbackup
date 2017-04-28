@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="linkScene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="402.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.linkController">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <children>
+      <Group layoutX="93.0" layoutY="125.0" />
+      <Group layoutX="25.0" layoutY="44.0" />
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#f2f2f2" height="472.0" layoutX="-3.0" layoutY="-5.0" stroke="WHITE" strokeType="INSIDE" width="409.0" />
+      <ImageView fx:id="append" layoutX="2.0" layoutY="435.0" onMouseClicked="#ipAdd">
+         <image>
+            <Image url="@application/u91.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="synchroSetting" layoutX="366.0" layoutY="434.0" onMouseClicked="#synSetting">
+         <image>
+            <Image url="@application/u105.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="49.0" layoutX="3.0" layoutY="9.0" stroke="WHITE" strokeType="INSIDE" width="397.0" />
+      <Separator fx:id="separator" layoutX="3.0" layoutY="58.0" prefWidth="397.0" />
+      <ScrollPane fx:id="scroll" layoutX="3.0" layoutY="39.0" prefHeight="389.0" prefWidth="397.0" />
+      <Label layoutX="140.0" layoutY="14.0" text="Server Manager">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="334.0" layoutY="434.0" onMouseClicked="#refresh" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@application/u148.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

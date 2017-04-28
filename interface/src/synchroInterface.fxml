@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="synchroScene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.synchroController">
+   <children>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#f2f2f2" height="270.0" layoutX="-7.0" layoutY="-6.0" stroke="WHITE" strokeType="INSIDE" width="616.0" />
+      <ImageView fitHeight="40.0" fitWidth="610.0" layoutX="-4.0" layoutY="5.0">
+         <image>
+            <Image url="@application/u125.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="backup" fontSmoothingType="LCD" layoutX="41.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="备份策略">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="realTime" layoutX="79.0" layoutY="101.0" mnemonicParsing="false" text="实时备份" />
+      <RadioButton fx:id="manual" layoutX="79.0" layoutY="149.0" mnemonicParsing="false" text="手动备份" />
+      <RadioButton fx:id="timing" layoutX="79.0" layoutY="196.0" mnemonicParsing="false" text="定时备份" />
+      <RadioButton fx:id="persave" layoutX="344.0" layoutY="101.0" mnemonicParsing="false" text="永久保存" />
+      <RadioButton fx:id="reserve" layoutX="344.0" layoutY="149.0" mnemonicParsing="false" text="保留" />
+      <Text fx:id="save" fontSmoothingType="LCD" layoutX="318.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="服务器保存策略">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="totalset" fontSmoothingType="LCD" layoutX="58.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="全局配置">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Hyperlink fx:id="totalsetSwitch" layoutX="303.0" layoutY="15.0" onAction="#toPartset" text="切换到局部设置" />
+      <AnchorPane fx:id="partset" layoutX="2.0" layoutY="2.0" prefHeight="46.0" prefWidth="603.0" visible="false">
+         <children>
+            <Hyperlink layoutX="301.0" layoutY="13.0" onAction="#toTotalset" text="切换到全局设置" />
+            <Text fx:id="globalConf1" fontSmoothingType="LCD" layoutX="56.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="局部配置">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Pane fx:id="serverpane" layoutX="127.0" layoutY="12.0" prefHeight="30.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+      <Pane fx:id="timingchoice" layoutX="158.0" layoutY="189.0" prefHeight="30.0" prefWidth="123.0" />
+      <Pane fx:id="savechoice" layoutX="395.0" layoutY="146.0" prefHeight="23.0" prefWidth="92.0" />
+      <ImageView fx:id="back" layoutX="5.0" layoutY="10.0" onMouseClicked="#back">
+         <image>
+            <Image url="@application/u63.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

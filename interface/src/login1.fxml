@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="347.0" stylesheets="@../../../interface/src/application/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.login1Controller">
+   <children>
+      <Rectangle arcHeight="40.0" arcWidth="20.0" fill="#f2f2f2" height="491.0" layoutX="1.0" strokeType="INSIDE" width="345.0" />
+      <VBox layoutX="1.0" layoutY="14.0" prefHeight="478.0" prefWidth="345.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="345.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@application/u2.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="90.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label alignment="CENTER" prefHeight="75.0" prefWidth="345.0" text="Time Machine" textAlignment="CENTER">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <HBox fx:id="pane" prefHeight="56.0" prefWidth="345.0">
+               <children>
+                  <ImageView fx:id="icon_server" fitHeight="26.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@application/00_u12.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </HBox.margin></ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="345.0">
+               <children>
+                  <ImageView fx:id="icon_cloud" fitHeight="24.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@application/01_u6.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </HBox.margin></ImageView>
+                  <TextField fx:id="text_ip" prefHeight="28.0" prefWidth="180.0" promptText="远程服务器地址" />
+                  <Label alignment="CENTER" prefHeight="29.0" prefWidth="20.0" text=":" textAlignment="CENTER" />
+                  <TextField fx:id="text_port" prefHeight="28.0" prefWidth="59.0" promptText="默认20" />
+               </children>
+            </HBox>
+            <HBox prefHeight="62.0" prefWidth="345.0">
+               <children>
+                  <ImageView fx:id="icon_file" fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@application/02_u20.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </HBox.margin></ImageView>
+                  <TextField fx:id="text_fileadd" prefHeight="30.0" prefWidth="228.0" promptText="本地同步目录" />
+                  <Button fx:id="button_files" mnemonicParsing="false" onAction="#filechose" prefHeight="29.0" prefWidth="30.0" text="Button" />
+               </children>
+            </HBox>
+            <Pane prefHeight="41.0" prefWidth="345.0">
+               <children>
+                  <Polygon fx:id="button_spread" fill="#9a9ea1" layoutX="173.0" layoutY="10.0" onMouseClicked="#spread" rotate="180.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="INSIDE" style="-fx-scale-x: 0.3; -fx-scale-y: 0.3;">
+                    <points>
+                      <Double fx:value="-50.0" />
+                      <Double fx:value="40.0" />
+                      <Double fx:value="50.0" />
+                      <Double fx:value="40.0" />
+                      <Double fx:value="0.0" />
+                      <Double fx:value="-60.0" />
+                    </points>
+                  </Polygon>
+               </children>
+            </Pane>
+            <Button fx:id="button_save" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="50.0" prefWidth="116.0" text="Save">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="110.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</Pane>
