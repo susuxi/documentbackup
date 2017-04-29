@@ -1,4 +1,4 @@
-package application;
+package cn.edu.scau.cmi.oop.application;
 /**
  * @author susan
  */
@@ -28,8 +28,8 @@ import javafx.scene.layout.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.stage.Stage;
-import modules.Configuration;
-import modules.InfoOperation;
+import cn.edu.scau.cmi.oop.modules.Configuration;
+import cn.edu.scau.cmi.oop.modules.InfoOperation;
 
 public class linkController implements ControlledStage,Initializable{
 	@FXML
@@ -52,7 +52,7 @@ public class linkController implements ControlledStage,Initializable{
     VBox vb = new VBox();    
     String infopath = System.getProperty("user.dir");    
     ArrayList<Configuration> userinfo = InfoOperation.load(infopath);
-    //ArrayList<Node> serverList = new ArrayList<>();   //·þÎñÆ÷½áµã 
+    //ArrayList<Node> serverList = new ArrayList<>();   //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
     
     public void initialize(URL location, ResourceBundle resources) {
        // scroll.nodeOrientationProperty().bind(serverList);
@@ -103,11 +103,11 @@ public class linkController implements ControlledStage,Initializable{
 		pane.setStyle("-fx-background-color:white;");
 		pane.setPrefSize(395,45);
 		if(c.type.equals("SFTP")){
-			icontype = new Image("image/sftp.png");
+			icontype = new Image("cn/edu/scau/cmi/oop/image/sftp.png");
 		}else if(c.type.equals("FTP")){
-			icontype = new Image("image/ftp.png");
+			icontype = new Image("cn/edu/scau/cmi/oop/image/ftp.png");
 		}else{
-			icontype = new Image("image/local.png");
+			icontype = new Image("cn/edu/scau/cmi/oop/image/local.png");
 		}
 		ImageView iconftp1 = new ImageView(icontype);
 		iconftp1.setFitWidth(45); iconftp1.setFitHeight(40);
@@ -116,14 +116,14 @@ public class linkController implements ControlledStage,Initializable{
 		label.setGraphic(iconftp1);
 		label.setLayoutX(5); label.setLayoutY(2);
 		
-		Image icondel = new Image("image/del.png");
+		Image icondel = new Image("cn/edu/scau/cmi/oop/image/del.png");
 		ImageView icondel1 = new ImageView(icondel);
 		icondel1.setFitWidth(20); icondel1.setFitHeight(20);
 		Pane delpane = new Pane();
 		delpane.setPrefSize(20, 20);delpane.getChildren().add(icondel1);
 		delpane.setLayoutX(330);delpane.setLayoutY(10);
 		
-		Image iconlink = new Image("image/link.png");
+		Image iconlink = new Image("cn/edu/scau/cmi/oop/image/link.png");
 		ImageView iconlink1 = new ImageView(iconlink);
 		iconlink1.setFitWidth(20); iconlink1.setFitHeight(20);
 		iconlink1.setLayoutX(360);iconlink1.setLayoutY(10);
@@ -141,7 +141,7 @@ public class linkController implements ControlledStage,Initializable{
 		delpane.setOnMouseClicked(e->{
 			Alert alert = new Alert(AlertType.WARNING);
             alert.setTitle("Warning");
-            alert.setHeaderText("È·¶¨É¾³ý£¿");
+            alert.setHeaderText("Delete confirming?");
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK){
             	userinfo.remove(userinfo.get(i));

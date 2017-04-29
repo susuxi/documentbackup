@@ -10,23 +10,23 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="operateScene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.operateController">
+<AnchorPane fx:id="operateScene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.edu.scau.cmi.oop.application.operateController">
    <children>
       <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#f2f2f2" height="481.0" layoutX="-7.0" layoutY="-7.0" stroke="WHITE" strokeType="INSIDE" width="631.0" />
       <ImageView fx:id="back" fitHeight="24.0" fitWidth="16.0" layoutX="6.0" layoutY="4.0" onMouseClicked="#back">
          <image>
-            <Image url="@image/u63.png" />
+            <Image url="@cn/edu/scau/cmi/oop/image/u63.png" />
          </image>
       </ImageView>
       <ImageView fx:id="search" layoutX="389.0" layoutY="5.0">
          <image>
-            <Image url="@image/u150.png" />
+            <Image url="@cn/edu/scau/cmi/oop/image/u150.png" />
          </image>
       </ImageView>
       <TextField fx:id="searchDocName" layoutX="416.0" layoutY="3.0" prefHeight="23.0" prefWidth="186.0" promptText="要搜索的文件名" />
       <ImageView fx:id="synchro" layoutX="299.0" layoutY="221.0" onMouseClicked="#RealSynch">
          <image>
-            <Image url="@image/u186.png" />
+            <Image url="@cn/edu/scau/cmi/oop/image/u186.png" />
          </image>
       </ImageView>
       <AnchorPane fx:id="locFolder" layoutX="6.0" layoutY="34.0" prefHeight="397.0" prefWidth="288.0">
@@ -46,7 +46,7 @@
                <children>
                   <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="2.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@image/u91.png" />
+                        <Image url="@cn/edu/scau/cmi/oop/image/u91.png" />
                      </image>
                   </ImageView>
                </children>

@@ -1,4 +1,4 @@
-package modules;
+package cn.edu.scau.cmi.oop.modules;
 /**
  * Created by CJY on 2017/4/23.
  */

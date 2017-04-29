@@ -1,4 +1,4 @@
-package application;
+package cn.edu.scau.cmi.oop.application;
 
 import java.awt.Cursor;
 import java.io.IOException;
@@ -14,10 +14,10 @@ import com.jcraft.jsch.UserInfo;
 
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import modules.Configuration;
-import modules.InfoOperation;
-import modules.ServerUtil;
-import strategy.RealTimeSync;
+import cn.edu.scau.cmi.oop.modules.Configuration;
+import cn.edu.scau.cmi.oop.modules.InfoOperation;
+import cn.edu.scau.cmi.oop.modules.ServerUtil;
+import cn.edu.scau.cmi.oop.strategy.RealTimeSync;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
@@ -67,7 +67,7 @@ public class synchroController implements ControlledStage, Initializable {
         backup();
         save();
         settings();
-        partSet();
+
 	}
 
 	StageController myController;
@@ -85,6 +85,8 @@ public class synchroController implements ControlledStage, Initializable {
 		totalset.setVisible(false);
 		totalsetSwitch.setVisible(false);
 		partset.setVisible(true);
+                partSet();
+                
 	}
 
 	public void toTotalset() {
@@ -137,12 +139,12 @@ public class synchroController implements ControlledStage, Initializable {
 	
 	public void backup(){
 		final String[] greetings = new String[] {
-				"Ã¿ÌìÒ»´Î","Ã¿12Ğ¡Ê±","Ã¿6Ğ¡Ê±","Ã¿2Ğ¡Ê±",
-				"Ã¿1Ğ¡Ê±","Ò»ÖÜÒ»´Î","ÈıÌìÒ»´Î"
+				"ä¸€å¤©ä¸€æ¬¡","æ¯12å°æ—¶","æ¯6å°æ—¶","æ¯2å°æ—¶",
+				"æ¯1å°æ—¶","ä¸€å‘¨ä¸€æ¬¡","ä¸‰å¤©ä¸€æ¬¡"
 		};
 		ObservableList<String> timings = FXCollections.observableArrayList(
-				"Ã¿ÌìÒ»´Î","Ã¿12Ğ¡Ê±","Ã¿6Ğ¡Ê±","Ã¿2Ğ¡Ê±",
-				"Ã¿1Ğ¡Ê±","Ò»ÖÜÒ»´Î","ÈıÌìÒ»´Î"); 
+				"ä¸€å¤©ä¸€æ¬¡","æ¯12å°æ—¶","æ¯6å°æ—¶","æ¯2å°æ—¶",
+				"æ¯1å°æ—¶","ä¸€å‘¨ä¸€æ¬¡","ä¸‰å¤©ä¸€æ¬¡"); 
 		ChoiceBox<String> choicebox = new ChoiceBox<>(timings);
 		timingchoice.getChildren().add(choicebox);		
 		choicebox.getSelectionModel().selectedIndexProperty()
@@ -157,9 +159,9 @@ public class synchroController implements ControlledStage, Initializable {
 	}
 	public void save(){
 		final String[] greetings = new String[] {
-				"Ò»Äê","°ëÄê","Èı¸öÔÂ","Ò»¸öÔÂ","Ò»ÖÜ"};
+				"ä¸€å¹´","åŠå¹´","ä¸‰ä¸ªæœˆ","ä¸€ä¸ªæœˆ","ä¸€å‘¨"};
 		ObservableList<String> saving = FXCollections.observableArrayList(
-				"Ò»Äê","°ëÄê","Èı¸öÔÂ","Ò»¸öÔÂ","Ò»ÖÜ");
+				"ä¸€å¹´","åŠå¹´","ä¸‰ä¸ªæœˆ","ä¸€ä¸ªæœˆ","ä¸€å‘¨");
 		ChoiceBox<String> choicebox2 = new ChoiceBox<>(saving);
 		savechoice.getChildren().add(choicebox2);
 		choicebox2.getSelectionModel().selectedIndexProperty()
@@ -174,6 +176,7 @@ public class synchroController implements ControlledStage, Initializable {
 	}
 	
 	public void partSet(){
+                userinfo = InfoOperation.load(infopath);
 		final String[] greetings = new String[userinfo.size()];
 		ObservableList<String> servers = FXCollections.observableArrayList();
 		int i=0;

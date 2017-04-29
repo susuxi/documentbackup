@@ -1,4 +1,4 @@
-package application;
+package cn.edu.scau.cmi.oop.application;
 
 import java.awt.PopupMenu;
 import java.awt.SystemTray;
@@ -15,11 +15,11 @@ import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import modules.Configuration;
-import modules.InfoOperation;
+import cn.edu.scau.cmi.oop.modules.Configuration;
+import cn.edu.scau.cmi.oop.modules.InfoOperation;
 
 /**
- * ÏµÍ³ÍĞÅÌ¿ØÖÆÀà
+ * ÏµÍ³ï¿½ï¿½ï¿½Ì¿ï¿½ï¿½ï¿½ï¿½ï¿½
  * 
  * @author susan
  * 
@@ -30,9 +30,9 @@ public class Systray {
 	StageController stageController;
 	private TrayIcon trayIcon;
 	private Stage stage;
-	// icon ÍĞÅÌÍ¼±ê×´Ì¬£¬trueÊ±ÎªÍĞÅÌÆôÓÃ£¬Ä¬ÈÏÎ´ÆôÓÃ
+	// icon ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½×´Ì¬ï¿½ï¿½trueÊ±Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½Ä¬ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½
 	boolean icon = false;
-	// FormerMouselistener ÉÏÒ»¸ö½çÃæµÄÊó±ê¼àÌıÆ÷£¬ÓÃÓÚÒÆ³ıÉÏÒ»½çÃæµÄÍĞÅÌ¿ØÖÆ
+	// FormerMouselistener ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ³ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¿ï¿½ï¿½ï¿½
 	private MouseListener formermouselistener;
 
 	public void setcontroller(StageController stageController) {
@@ -40,10 +40,10 @@ public class Systray {
 	}
 
 	/**
-	 * ÆôÓÃÏµÍ³ÍĞÅÌÍ¼±ê
+	 * ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½
 	 * 
 	 * @param name
-	 *            ĞèÒªÓëÍ¼±ê¹ØÁªµÄ½çÃæÃû³Æ
+	 *            ï¿½ï¿½Òªï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	public void setTray(String name) {
 		stage = stageController.getStage(name);
@@ -66,27 +66,27 @@ public class Systray {
 	}
 
 	/**
-	 * ÅäÖÃÏµÍ³ÍĞÅÌÍ¼±ê
+	 * ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½
 	 * 
 	 * @param stage
 	 */
 	private void enableTray(Stage stage) {
 		PopupMenu popupMenu = new PopupMenu();
-		java.awt.MenuItem openItem = new java.awt.MenuItem("ÏÔÊ¾");
-		java.awt.MenuItem hideItem = new java.awt.MenuItem("×îĞ¡»¯");
-		java.awt.MenuItem quitItem = new java.awt.MenuItem("ÍË³ö");
+		java.awt.MenuItem openItem = new java.awt.MenuItem("show");
+		java.awt.MenuItem hideItem = new java.awt.MenuItem("hide");
+		java.awt.MenuItem quitItem = new java.awt.MenuItem("exit");
 
 		ActionListener acl = new ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				java.awt.MenuItem item = (java.awt.MenuItem) e.getSource();
 
-				if (item.getLabel().equals("ÍË³ö")) {
+				if (item.getLabel().equals("exit")) {
 					SystemTray.getSystemTray().remove(trayIcon);
 					Platform.exit();
 					icon = false;
 					return;
 				}
-				if (item.getLabel().equals("ÏÔÊ¾")) {
+				if (item.getLabel().equals("show")) {
 					Platform.runLater(new Runnable() {
 						@Override
 						public void run() {
@@ -94,7 +94,7 @@ public class Systray {
 						}
 					});
 				}
-				if (item.getLabel().equals("×îĞ¡»¯")) {
+				if (item.getLabel().equals("hide")) {
 					Platform.runLater(new Runnable() {
 						@Override
 						public void run() {
@@ -107,7 +107,7 @@ public class Systray {
 
 		};
 
-		// Êó±êË«»÷ÊÂ¼ş·½·¨
+		// ï¿½ï¿½ï¿½Ë«ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
 		MouseListener sj = new MouseListener() {
 			public void mouseReleased(MouseEvent e) {
 			}
@@ -122,7 +122,7 @@ public class Systray {
 			}
 
 			public void mouseClicked(MouseEvent e) {
-				Platform.setImplicitExit(false); // ¶à´ÎÊ¹ÓÃÏÔÊ¾ºÍÒş²ØÉèÖÃfalse
+				Platform.setImplicitExit(false); // ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½false
 				if (e.getClickCount() == 2) {
 					if (stage.isShowing()) {
 						Platform.runLater(new Runnable() {
@@ -152,13 +152,13 @@ public class Systray {
 		popupMenu.add(openItem);
 		popupMenu.add(hideItem);
 		popupMenu.add(quitItem);
-		// Ê×´Î´ò¿ª½çÃæÊÇ£¬´´½¨ÏµÍ³ÍĞÅÌ¶ÔÏó
+		// ï¿½×´Î´ò¿ª½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ï¿½
 		if (icon == false) {
 			try {
 
 				SystemTray tray = SystemTray.getSystemTray();
 
-				BufferedImage image = ImageIO.read(Main.class.getResourceAsStream("/image/u2.png"));
+				BufferedImage image = ImageIO.read(Main.class.getResourceAsStream("/cn/edu/scau/cmi/oop/image/u2.png"));
 
 				trayIcon = new TrayIcon(image, "TimeMachine", popupMenu);
 				trayIcon.setImageAutoSize(true);
@@ -172,7 +172,7 @@ public class Systray {
 				e.printStackTrace();
 			}
 		} else {
-			// ÍĞÅÌ¶ÔÏóÒÑ´æÔÚ£¬¸ü¸ÄÍĞÅÌ¹ØÁª½çÃæ
+			// ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			trayIcon.setPopupMenu(popupMenu);
 			trayIcon.removeMouseListener(formermouselistener);
 			formermouselistener = sj;

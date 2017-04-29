@@ -1,4 +1,4 @@
-package application;
+package cn.edu.scau.cmi.oop.application;
 	
 
 
@@ -7,8 +7,8 @@ import java.io.IOException;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.Stage;
-import modules.FtpUtil;
-import modules.SFtpUtil;
+import cn.edu.scau.cmi.oop.modules.FtpUtil;
+import cn.edu.scau.cmi.oop.modules.SFtpUtil;
 
 
 public class Main extends Application {
@@ -44,7 +44,7 @@ public class Main extends Application {
 			stageController.loadStage(synchroInterface, synchroInterfaceRes);
 			
 			stageController.setStage(Main.login1ID);
-			Platform.setImplicitExit(false); //¶à´ÎÊ¹ÓÃÏÔÊ¾ºÍÒþ²ØÉèÖÃfalse
+			Platform.setImplicitExit(false); //ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½false
  
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -54,8 +54,6 @@ public class Main extends Application {
 	public void checkUpdate(){
 		
 	}
-	
-	
 	
 	public static void main(String[] args) throws IOException {
 		launch(args);

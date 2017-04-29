@@ -1,7 +1,7 @@
-package application;
+package cn.edu.scau.cmi.oop.application;
 
 /**
- * stage¿ØÖÆ½Ó¿Ú
+ * stageï¿½ï¿½ï¿½Æ½Ó¿ï¿½
  * @author susan
  *
  */

@@ -1,6 +1,6 @@
-package application;
+package cn.edu.scau.cmi.oop.application;
 /**
- * login1ÆÕÍ¨µÇÂ½½çÃæ¿ØÖÆÆ÷
+ * login1ï¿½ï¿½Í¨ï¿½ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author susan
  */
 
@@ -27,8 +27,10 @@ import java.util.ResourceBundle;
 
 import javax.swing.text.html.HTMLEditorKit.LinkController;
 
-import modules.Configuration;
-import modules.InfoOperation;
+import cn.edu.scau.cmi.oop.modules.Configuration;
+import cn.edu.scau.cmi.oop.modules.InfoOperation;
+import cn.edu.scau.cmi.oop.application.*;
+
 import javafx.stage.*;
 
 import java.awt.MenuItem;
@@ -66,31 +68,30 @@ public class login1Controller implements ControlledStage, Initializable {
 	}
 
 	/**
-	 * µÇÂ½²¢ÇÐ»»½çÃæ ÐÅÏ¢ÊäÈëÑéÖ¤ÓÐ´ý²¹³ä
+	 * ï¿½ï¿½Â½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @throws IOException
 	 */
 	public boolean saveButtonClicked() throws IOException {
-    //²âÊÔÍêÈ¡Ïû×¢ÊÍ----------------------------------------------------------------------
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½×¢ï¿½ï¿½----------------------------------------------------------------------
 		if(getServerType().equals("")){
 			Alert alert = new Alert(AlertType.WARNING);
             alert.setTitle("Warning");
-            alert.setHeaderText("ÇëÊäÈë·þÎñÆ÷ÀàÐÍ!!");
+            alert.setHeaderText("Empty ServerType!!");
             alert.showAndWait();
-			System.out.println("!!!!!");
 			return false;
         }
 		if(getIp().equals("")){
 			Alert alert = new Alert(AlertType.WARNING);
             alert.setTitle("Warning");
-            alert.setHeaderText("ÇëÊäÈë·þÎñÆ÷IP!!");
+            alert.setHeaderText("Empty IP!!");
             alert.showAndWait();
 			return false;
 		}
 		if(getWatchingDic().equals("")){
 			Alert alert = new Alert(AlertType.WARNING);
             alert.setTitle("Warning");
-            alert.setHeaderText("ÇëÊäÈë¼à¿ØÄ¿Â¼!!");
+            alert.setHeaderText("Empty watching dictionary!!");
             alert.showAndWait();
             return false;
 		}
@@ -101,7 +102,7 @@ public class login1Controller implements ControlledStage, Initializable {
 	}
 
 	/**
-	 * Õ¹¿ªµÇÂ½½çÃæ
+	 * Õ¹ï¿½ï¿½ï¿½ï¿½Â½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @throws IOException
 	 */
@@ -111,13 +112,13 @@ public class login1Controller implements ControlledStage, Initializable {
 	}
 
 	/**
-	 * »ñÈ¡±¾µØÍ¬²½Ä¿Â¼
+	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½Ä¿Â¼
 	 * 
 	 * @throws IOException
 	 */
 	public void filechose() throws IOException {
 		DirectoryChooser chooser = new DirectoryChooser();
-		chooser.setTitle("Ñ¡ÔñÎÄ¼þ¼Ð");
+		chooser.setTitle("chose file");
 		File file = chooser.showDialog(myController.getStage("login1"));
 		String add = file.getAbsolutePath();
 		text_fileadd.setText(add);
@@ -138,7 +139,7 @@ public class login1Controller implements ControlledStage, Initializable {
 	}
 
 	public String getWatchingDic() {
-		System.out.println("fileaddress chosing...");
+		System.out.println("fileaddress chosing...");//***********
 		String add = new String();
 		add = text_fileadd.getText();
 		return add;

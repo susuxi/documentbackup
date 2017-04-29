@@ -1,4 +1,4 @@
-package watch;
+package cn.edu.scau.cmi.oop.watch;
 
 /**
  * 

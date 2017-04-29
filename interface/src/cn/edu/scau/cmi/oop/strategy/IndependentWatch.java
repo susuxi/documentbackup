@@ -1,4 +1,4 @@
-package strategy;
+package cn.edu.scau.cmi.oop.strategy;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -6,9 +6,9 @@ import java.nio.file.Paths;
 import java.util.NoSuchElementException;
 import java.util.concurrent.LinkedBlockingDeque;
 
-import watch.ChangeItem;
-import watch.ChangeKind;
-import watch.Watch;
+import cn.edu.scau.cmi.oop.watch.ChangeItem;
+import cn.edu.scau.cmi.oop.watch.ChangeKind;
+import cn.edu.scau.cmi.oop.watch.Watch;
 
 public class IndependentWatch extends Watch implements Runnable {
 

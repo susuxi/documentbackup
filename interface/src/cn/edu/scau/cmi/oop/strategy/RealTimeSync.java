@@ -1,4 +1,4 @@
-package strategy;
+package cn.edu.scau.cmi.oop.strategy;
 
 import java.io.IOException;
 import java.nio.file.FileVisitResult;
@@ -12,11 +12,11 @@ import java.util.Date;
 import java.util.NoSuchElementException;
 import java.util.concurrent.LinkedBlockingDeque;
 
-import modules.ServerUtil;
-import modules.LocalUtil;
-import watch.ChangeItem;
-import watch.ChangeKind;
-import watch.Watch;
+import cn.edu.scau.cmi.oop.modules.ServerUtil;
+import cn.edu.scau.cmi.oop.modules.LocalUtil;
+import cn.edu.scau.cmi.oop.watch.ChangeItem;
+import cn.edu.scau.cmi.oop.watch.ChangeKind;
+import cn.edu.scau.cmi.oop.watch.Watch;
 
 /**
  * @author TESLA_CN

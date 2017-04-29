@@ -1,4 +1,4 @@
-package modules;
+package cn.edu.scau.cmi.oop.modules;
 
 import org.apache.commons.net.ftp.*;
 

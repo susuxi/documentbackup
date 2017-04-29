@@ -1,4 +1,4 @@
-package application;
+package cn.edu.scau.cmi.oop.application;
 /**
  * @author susan
  */
@@ -30,18 +30,18 @@ import javafx.event.ActionEvent;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import modules.Configuration;
-import modules.FtpUtil;
-import modules.InfoOperation;
-import modules.LocalUtil;
-import modules.SFtpUtil;
-import modules.ServerFile;
-import strategy.IndependentWatch;
-import strategy.RealTimeSync;
-import watch.ChangeItem;
-import modules.LocalUtil;
-import modules.SFtpUtil;
-import modules.FtpUtil;
+import cn.edu.scau.cmi.oop.modules.Configuration;
+import cn.edu.scau.cmi.oop.modules.FtpUtil;
+import cn.edu.scau.cmi.oop.modules.InfoOperation;
+import cn.edu.scau.cmi.oop.modules.LocalUtil;
+import cn.edu.scau.cmi.oop.modules.SFtpUtil;
+import cn.edu.scau.cmi.oop.modules.ServerFile;
+import cn.edu.scau.cmi.oop.strategy.IndependentWatch;
+import cn.edu.scau.cmi.oop.strategy.RealTimeSync;
+import cn.edu.scau.cmi.oop.watch.ChangeItem;
+import cn.edu.scau.cmi.oop.modules.LocalUtil;
+import cn.edu.scau.cmi.oop.modules.SFtpUtil;
+import cn.edu.scau.cmi.oop.modules.FtpUtil;
 public class operateController<T, S> implements ControlledStage, Initializable {
 	@FXML
 	private ImageView back, search, up, down, update;
@@ -104,7 +104,7 @@ public class operateController<T, S> implements ControlledStage, Initializable {
 
 	public void filechose() throws IOException {
 		DirectoryChooser chooser = new DirectoryChooser();
-		chooser.setTitle("—°‘ÒŒƒº˛º–");
+		chooser.setTitle("file chose");
 		File file = chooser.showDialog(myController.getStage("operateInterface"));
 		String add = file.getAbsolutePath();
 		dir.setText(add);
@@ -116,13 +116,13 @@ public class operateController<T, S> implements ControlledStage, Initializable {
 		getCurServer();
 		switch(cur.backupstrategy){
 		case "Timing":     RealSynch();break;
-		case "√øÃÏ“ª¥Œ":   timingSyn(86400000);break;
-		case "√ø12–° ±":    timingSyn(43200000);break;
-		case "√ø6–° ±": timingSyn(21600000);break;
-		case "√ø2–° ±": timingSyn(7200000);break;
-		case "√ø1–° ±": timingSyn(3600000);break;
-		case "“ª÷‹“ª¥Œ": timingSyn(604800000);break;
-		case "»˝ÃÏ“ª¥Œ": timingSyn(259200000);break;
+		case "‰∏ÄÂ§©‰∏ÄÊ¨°":   timingSyn(86400000);break;
+		case "12Â∞èÊó∂":    timingSyn(43200000);break;
+		case "6Â∞èÊó∂": timingSyn(21600000);break;
+		case "2Â∞èÊó∂": timingSyn(7200000);break;
+		case "1Â∞èÊó∂": timingSyn(3600000);break;
+		case "‰∏ÄÂë®‰∏ÄÊ¨°": timingSyn(604800000);break;
+		case "‰∏âÂ§©‰∏ÄÊ¨°": timingSyn(259200000);break;
 		default :return;
 		}
 	}
@@ -138,7 +138,7 @@ public class operateController<T, S> implements ControlledStage, Initializable {
 		
 		CheckBox cb = new CheckBox();
 		cb.setLayoutX(30);cb.setLayoutY(1);
-		Image icondel = new Image("image/del.png");
+		Image icondel = new Image("cn/edu/scau/cmi/oop/image/del.png");
 		ImageView icondel1 = new ImageView(icondel);
 		icondel1.setFitWidth(15); icondel1.setFitHeight(15);
 		Pane delpane = new Pane();
@@ -305,7 +305,7 @@ public class operateController<T, S> implements ControlledStage, Initializable {
 	}*/
 
 	/**
-	 * ”–bug£°£°£°
+	 * ÔøΩÔøΩbugÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ
 	 * @throws IOException 
 	 */
 /*	public void buildTree() throws IOException {
